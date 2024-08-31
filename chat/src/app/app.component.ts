@@ -8,7 +8,7 @@ import { ChatUsuarioComponent } from './chat-usuario/chat-usuario.component';
   standalone: true,
   imports: [RouterOutlet, SalaComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'chat';

@@ -6,19 +6,19 @@ import { Data } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './chat-usuario.component.html',
-  styleUrl: './chat-usuario.component.css'
+  styleUrl: './chat-usuario.component.css',
 })
 export class ChatUsuarioComponent {
   @Output() mensajeNuevo = new EventEmitter<string>();
-  @Input() nombre: string = "";
-  mensaje: string = "";
-  
+  @Input() nombre: string = '';
+  mensaje: string = '';
+
   onMensajeChange(event: any) {
     this.mensaje = event.target.value;
-  }  
+  }
 
   enviarMensaje() {
-    this.mensajeNuevo.emit(this.nombre +": "+ this.mensaje);
-    this.mensaje = "";
+    this.mensajeNuevo.emit(this.nombre + ': ' + this.mensaje);
+    this.mensaje = '';
   }
 }
