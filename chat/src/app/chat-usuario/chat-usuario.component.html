@@ -1,0 +1,8 @@
+<div class="border p-3 mb-3">
+    <h5>Usuario</h5>
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea [value]="mensaje" (input)="onMensajeChange($event)" id="mensaje" class="form-control" rows="3"></textarea>  
+    </div>
+    <button (click)="enviarMensaje()" class="btn btn-primary mt-2">Guardar</button>
+  </div>

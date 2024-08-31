@@ -1,0 +1,23 @@
+<div class="border p-3">
+    <div class="border p-3" style="padding-bottom: 10%;">
+            <h3>Sala de Chat</h3>
+            <ul class="list-group list-group-flush">
+                @for (chat of chats; track chat) {
+                <li class="list-group-item">{{chat}} </li>
+                }
+            </ul>
+
+    </div>
+    
+    <div class="row">
+        <h4 style="padding-top: 1%;">Conversación</h4>
+        <div class="col-md-6">
+            <app-chat-usuario [nombre]="'Luis'"
+                (mensajeNuevo)="RecibirMensaje($event)"></app-chat-usuario>
+        </div>
+        <div class="col-md-6">
+            <app-chat-usuario [nombre]="'Juan'"
+                (mensajeNuevo)="RecibirMensaje($event)"></app-chat-usuario>
+        </div>
+    </div>
+</div>
